@@ -1,6 +1,6 @@
 """Langgraph State."""
 
-from typing import Annotated
+from typing import Annotated, Any
 
 from langgraph.graph.message import AnyMessage, add_messages
 from typing_extensions import TypedDict
@@ -15,3 +15,8 @@ class State(TypedDict):
     """
 
     messages: Annotated[list[AnyMessage], add_messages]
+    next_node: str
+    should_continue_data: Any
+
+    gender: str
+    breed: str
