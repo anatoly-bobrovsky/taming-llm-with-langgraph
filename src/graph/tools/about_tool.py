@@ -19,6 +19,6 @@ def get_about_message(query: str) -> str:
 about = StructuredTool.from_function(
     func=get_about_message,
     name="about",
-    description="Useful when you are asked to tell about yourself",
+    description="Useful when you are asked to tell what you can do",
     return_direct=True,
 )
